@@ -53,7 +53,7 @@ print("Found PM2.5 sensor, reading data...")
 
 while time_now < 30:
     time.sleep(1)
-    time += 1
+    time_now += 1
   
 
     try:
