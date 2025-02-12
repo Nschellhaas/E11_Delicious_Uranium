@@ -78,7 +78,7 @@ while time_now < 30:
     print()
     print("Concentration Units (standard)")
     print("---------------------------------------")
-    print("Time (s):" + time_now)
+    print("Time (s):" + str(time_now))
     print("---------------------------------------")
     print(
         "PM 1.0: %d\tPM2.5: %d\tPM10: %d"
