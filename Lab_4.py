@@ -50,8 +50,7 @@ file = open('Lab_4_Data.csv', 'w', newline = None)
 
 csvwriter = csv.writer(file, delimiter = ',')
 
-csvwriter.writerow(["Time", "Particales > 5.0um / 0.1L air"])
-
+csvwriter.writerow(["Time", "Particles > 2.5um / 0.1L air"])
 
 
 
