@@ -64,7 +64,7 @@ while time_now < 30:
         continue
 
 
-    print(now)
+    print(time_now)
     print()
     print("Concentration Units (standard)")
     print("---------------------------------------")
