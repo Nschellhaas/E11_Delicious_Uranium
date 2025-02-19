@@ -52,10 +52,6 @@ csvwriter = csv.writer(file, delimiter = ',')
 
 csvwriter.writerow(["Time", "Particles > 2.5um / 0.1L air"])
 
-
-
-
-
 time_now = 0
 
 print("Found PM2.5 sensor, reading data...")
