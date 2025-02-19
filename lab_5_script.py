@@ -73,7 +73,7 @@ else:
 
 print("Found PM2.5 sensor, reading data...")
 
-while time_now < run_time
+while time_now < run_time:
     time.sleep(1)
     time_now += 1
   
