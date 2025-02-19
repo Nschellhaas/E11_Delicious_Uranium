@@ -10,6 +10,7 @@ import time
 import board
 import busio
 import csv
+import sys
 from digitalio import DigitalInOut, Direction, Pull
 from adafruit_pm25.i2c import PM25_I2C
 
@@ -54,9 +55,14 @@ csvwriter.writerow(["Time", "Particles > 2.5um / 0.1L air"])
 
 time_now = 0
 
+if len(sys.argv) < 2:
+    run_time = 30
+else:
+    run_time = int(sys.argv[1])
+
 print("Found PM2.5 sensor, reading data...")
 
-while time_now < 30:
+while time_now <: run_time
     time.sleep(1)
     time_now += 1
   
