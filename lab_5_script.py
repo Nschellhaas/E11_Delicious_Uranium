@@ -110,13 +110,16 @@ while time_now < run_time:
     print("Particles > 5.0um / 0.1L air:", aqdata["particles 50um"])
     print("Particles > 10 um / 0.1L air:", aqdata["particles 100um"])
     print("---------------------------------------")
+	
+    time = time.time() 
+    temp = bme680.temperature
+    gas = bme680.gas
+    pres = bme680.pressure
+    alt = bme680.altitude
+    hum = bme680.relative_humidity
+	
 
-	time = time.time()
-	temp = bme680.temperature
-	gas = bme680.gas
-	pres = bme680.pressure
-	alt = bme680.altitude
-	hum = bme680.relative_humidity
+	
 
     csvwriter.writerow([time_now, aqdata["particles 25um"], temp, gas, pres, alt, hum])
 
