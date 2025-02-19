@@ -114,7 +114,7 @@ while time_now < run_time:
 	print("Particles > 10 um / 0.1L air:", aqdata["particles 100um"])
 	print("---------------------------------------")
 		
-	time = time.time() 
+	#time = time.time() 
 	temp = bme680.temperature
 	gas = bme680.gas
 	pres = bme680.pressure
