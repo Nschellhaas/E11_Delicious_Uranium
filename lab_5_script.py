@@ -67,7 +67,7 @@ csvwriter.writerow(["Time", "Particles > 2.5um / 0.1L air", "Temperature", "Gas"
 
 time_now = 0
 
-# time.sleep(90)
+time.sleep(90)
 
 if len(sys.argv) < 2:
     run_time = 60
