@@ -17,7 +17,6 @@ count=0
 channel=11
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(channel,GPIO.IN,pull_up_down=GPIO.PUD_UP)
-GPIO.setup(channel,GPIO.OUT,pull_up_down=GPIO.PUD_DOWN)
 GPIO.add_event_detect(channel,GPIO.FALLING,callback=my_callback)
 while True:
     print(count)
