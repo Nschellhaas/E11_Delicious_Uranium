@@ -20,5 +20,4 @@ GPIO.setup(channel,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.add_event_detect(channel,GPIO.FALLING,callback=my_callback)
 while True:
     print(count)
-    time.sleep(1)
-    break
+    time.sleep(10)
