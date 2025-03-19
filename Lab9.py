@@ -7,17 +7,17 @@ def my_callback(channel):
     global count
     if GPIO.event_detected(channel):
         print(datetime.datetime.now())
+        print(count)
         count+=1
 
 
 global count
 count=0
-channel=11
+channel=17
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(channel,GPIO.IN)
 GPIO.setup(channel,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.add_event_detect(channel,GPIO.FALLING,callback=my_callback)
 while True:
-    print(count)
     time.sleep(10)
 
