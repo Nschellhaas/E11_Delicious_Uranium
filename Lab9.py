@@ -17,7 +17,7 @@ t=0
 def my_callback(channel):
     global count
     global t
-    t=datetime.timedelta(base).seconds
+    t=datetime.timedelta(days=base.day,seconds=base.second).seconds
     count+=1
     print(f"Time: {t}")
     print(f"Count: {count}")
