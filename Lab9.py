@@ -2,7 +2,7 @@ import numpy as np # type: ignore
 import RPi.GPIO as GPIO # type: ignore
 import datetime
 import time
-
+    
 
 
 def my_callback(channel):
