@@ -12,8 +12,11 @@ csvwriter = csv.writer(file, delimiter = ',')
 
 csvwriter.writerow(["Time", "Count"])
 base = datetime.datetime.now()
+global t
+t=0
 def my_callback(channel):
     global count
+    global t
     t=datetime.timedelta(base).seconds
     count+=1
     print(f"Time: {t}")
@@ -29,7 +32,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(channel,GPIO.IN)
 GPIO.setup(channel,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.add_event_detect(channel,GPIO.FALLING,callback=my_callback)
-while (datetime.datetime.now().second-base)<=20:
+while (t)<=20:
     time.sleep(10)
 
 file.close()
