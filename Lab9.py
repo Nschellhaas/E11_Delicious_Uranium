@@ -16,8 +16,8 @@ def my_callback(channel):
     global count
     t=datetime.datetime.now().second
     count+=1
-    print("f.Time: {t}")
-    print("f.Count: {count}")
+    print(f"Time: {t}")
+    print(f"Count: {count}")
     csvwriter.writerow([t,count])
 
 
