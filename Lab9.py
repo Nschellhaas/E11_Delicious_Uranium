@@ -10,13 +10,13 @@ file = open('Lab10_Data.csv', 'w', newline = None)
 csvwriter = csv.writer(file, delimiter = ',')
 
 csvwriter.writerow(["Time", "Count"])
-base = time.time()
+base = round(time.time(),0)
 global t
 t=0
 def my_callback(channel):
     global count
     global t
-    t=time.time()-base
+    t=round(time.time(),0)-base
     count+=1
     print(f"Time: {t}")
     print(f"Count: {count}")
@@ -31,7 +31,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(channel,GPIO.IN)
 GPIO.setup(channel,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.add_event_detect(channel,GPIO.FALLING,callback=my_callback)
-while (t)<=20:
+while (t)<=110:
     time.sleep(10)
 
 file.close()
