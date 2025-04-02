@@ -11,10 +11,10 @@ file = open('Lab10_Data.csv', 'w', newline = None)
 csvwriter = csv.writer(file, delimiter = ',')
 
 csvwriter.writerow(["Time", "Count"])
-base = datetime.datetime.now().second
+base = datetime.datetime.now()
 def my_callback(channel):
     global count
-    t=datetime.datetime.now().second-base
+    t=datetime.timedelta(base).seconds
     count+=1
     print(f"Time: {t}")
     print(f"Count: {count}")
