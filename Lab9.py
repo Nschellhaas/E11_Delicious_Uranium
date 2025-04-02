@@ -1,7 +1,6 @@
 import numpy as np # type: ignore
 import RPi.GPIO as GPIO # type: ignore
 import csv
-import datetime
 import time
     
 
@@ -11,13 +10,13 @@ file = open('Lab10_Data.csv', 'w', newline = None)
 csvwriter = csv.writer(file, delimiter = ',')
 
 csvwriter.writerow(["Time", "Count"])
-base = datetime.datetime.now()
+base = time.time()
 global t
 t=0
 def my_callback(channel):
     global count
     global t
-    t=datetime.timedelta(days=base.day,seconds=base.second).seconds
+    t=time.time()-base
     count+=1
     print(f"Time: {t}")
     print(f"Count: {count}")
